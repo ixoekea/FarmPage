@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dummy farm data
   const farms = {
     "lilac-acres": {
-      images: "images/logo.jpg",
+      image: "images/logo.jpg",
       name: "Lilac Acres Farm",
       location: ["250-401-3117", "Chetwynd, BC"],
       products: [
@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", () => {
       gallery: "images/Lilacacres-persian-star.jpg",
     },
     "kealy-farm": {
-      images: "images/comingsoon.jpg",
+      image: "images/comingsoon.jpg",
       name: "Kealy Farm",
       location: ["Cecil Lake, BC"],
       products: [
@@ -51,7 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("farm-description").textContent =
         farm.description;
       document.getElementById("farm-hours").innerHTML = farm.hours.join(`<br>`);
-      document.getElementById("farm-image").src = farm.images;
+      document.getElementById("farm-image").src = farm.image;
       document.getElementById("farm-gallery").src = farm.gallery;
     } else {
       document.getElementById("farm-name").textContent = "Farm not found.";
