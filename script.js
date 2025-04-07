@@ -10,7 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Dummy farm data
   const farms = {
     "lilac-acres": {
-      images: "images/LilacAcreFarmsLogo.jpg",
+      images: "images/Logo.jpg",
       name: "Lilac Acres Farm",
       location: ["250-401-3117", "Chetwynd, BC"],
       products: [
