@@ -3,10 +3,6 @@ document.addEventListener("DOMContentLoaded", () => {
   const params = new URLSearchParams(window.location.search);
   const farmId = params.get("farm");
 
-  //Gallery
-  let currentImageIndex = 0;
-  let currentGallery = [];
-
   // Dummy farm data
   const farms = {
     "lilac-acres": {
