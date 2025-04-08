@@ -45,7 +45,8 @@ h3 {
 #farm-products,
 #farm-hours,
 #farm-gallery,
-#farm-location {
+#farm-location,
+#farm-website {
   text-align: left; /* Ensure all text in these sections aligns left */
 }
 
@@ -59,11 +60,19 @@ h3,
   display: block;
 }
 .hours,
-.contact {
+.contact,
+#farm-website {
   font-size: 15px;
   line-height: 1.6;
 }
 
+#farm-website {
+  display: block;
+  color: #007bff;
+}
+#farm-website:hover {
+  color: #0056b3;
+}
 .message-btn {
   background-color: #007bff;
   color: white;
@@ -78,21 +87,26 @@ h3,
   background-color: #0056b3;
 }
 
-#gallery-container {
-  width: 100%;
-  height: 256px;
+#farm-gallery {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
   object-fit: cover;
-  border-radius: 12px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
-#gallery-container {
+
+#flex-gallery {
   transition: opacity 0.3s ease;
   opacity: 0;
 }
-#gallery-container.loaded {
+#flex-gallery.loaded {
   opacity: 1;
 }
 
 .about-us {
   border: 1px solid black;
   background-color: #bdeebd;
+  border-radius: 10px;
 }
