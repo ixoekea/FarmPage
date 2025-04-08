@@ -9,7 +9,7 @@ document.addEventListener("DOMContentLoaded", () => {
       logo: "images/logo.jpg",
       name: "Lilac Acres Farm",
       location: ["250-401-3117", "Chetwynd, BC"],
-      website: "https://github.com/ixoekea/Lilacacresfarm",
+      website: "https://ixoekea.github.io/lilacacresfarm/",
       products: [
         "<span>🧄 Garlic</span>",
         "<span>🍅 Tomatoes</span>",
