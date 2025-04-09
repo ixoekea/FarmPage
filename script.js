@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Dummy farm data
   const farms = {
+    "big-lake-ranch": {
+      logo: "images/biglakeranch.jpg",
+      name: "Big Lake Ranch",
+      location: ["", "Chetwynd, BC"],
+      website: "https://www.facebook.com/profile.php?id=100057530045962#",
+      products: ["<span>🥩 Beef</span>", "<span>🥔 Potatoes</span>"],
+      description:
+        "Big Lake Ranch is a multi-generational, Nichols family farm near Chetwynd, BC. We specialize in healthy, happy, grass-fed Black and Red Angus Beef, delicious produce and other unique and yummy seasonal farm products!",
+      hours: ["Sun-Fri: Appointment Only", "Sat: Closed"],
+      images: [""],
+    },
     "lilac-acres": {
       logo: "images/logo.jpg",
       name: "Lilac Acres Farm",
@@ -40,21 +51,21 @@ document.addEventListener("DOMContentLoaded", () => {
     },
   };
 
-  let currentIndex = 0;
+  //let currentIndex = 0;
 
-  function changeImage(farmId) {
-    const farm = farms[farmId];
-    if (farm) {
-      currentIndex = (currentIndex + 1) % farm.images.length; // Loop through the images array
-      document.getElementById("farm-gallery").src = farm.images[currentIndex];
-    }
-  }
+  //function changeImage(farmId) {
+  //  const farm = farms[farmId];
+  // if (farm) {
+  //   currentIndex = (currentIndex + 1) % farm.images.length; // Loop through the images array
+  //     document.getElementById("farm-gallery").src = farm.images[currentIndex];
+  //   }
+  // }
 
   // Change the image every 3 seconds for a specific farm
-  setInterval(() => changeImage("lilac-acres"), 3000);
+  //setInterval(() => changeImage("lilac-acres"), 3000);
 
   // Set the initial image when the page loads
-  changeImage("lilac-acres");
+  //changeImage("lilac-acres");
 
   // Load farm info
   if (farmId) {
@@ -71,9 +82,11 @@ document.addEventListener("DOMContentLoaded", () => {
       document.getElementById("farm-description").textContent =
         farm.description;
       document.getElementById("farm-hours").innerHTML = farm.hours.join(`<br>`);
-      document.getElementById("farm-images").src = farm.images;
-      document.getElementById("farm-website").href = farm.website;
-      document.getElementById("farm-website").textContent = "Visit Lilac Acres";
+      //  document.getElementById("farm-images").src = farm.images;
+      // Update the website link dynamically
+      const websiteLink = document.getElementById("farm-website");
+      websiteLink.href = farm.website;
+      websiteLink.textContent = "Visit " + farm.name; // Dynamically change the link text
     } else {
       document.getElementById("farm-name").textContent = "Farm not found.";
     }
@@ -96,32 +109,31 @@ window.onload = function () {
       farm.products.join(" ");
     document.getElementById("farm-description").textContent = farm.description;
     document.getElementById("farm-hours").innerHTML = farm.hours.join(`<br>`);
-    document.getElementById("farm-images").src = farm.images;
+    //   document.getElementById("farm-images").src = farm.images;
     document.getElementById("farm-website").href = farm.website;
-    document.getElementById("farm-website").textContent = "Visit Lilac Acres";
+    document.getElementById("farm-website").textContent = "Visit " + farm.name;
   } else {
     document.getElementById("farm-name").textContent = "Farm not found.";
   }
 };
 
 //Signup form
+// document
+//.getElementById("farm-signup-form")
+//.addEventListener("submit", async function (e) {
+//e.preventDefault();
 
-document
-  .getElementById("farm-signup-form")
-  .addEventListener("submit", async function (e) {
-    e.preventDefault();
+// const formData = new FormData(e.target);
+//const farmData = {
+// name: formData.get("farmName"),
+//email: formData.get("email"),
+//phone: formData.get("phone"),
+//location: formData.get("location"),
+//website: formData.get("website"),
+//logo: formData.get("logo")?.name || null, // You'll need to handle file uploads separately
+//};
 
-    const formData = new FormData(e.target);
-    const farmData = {
-      name: formData.get("farmName"),
-      email: formData.get("email"),
-      phone: formData.get("phone"),
-      location: formData.get("location"),
-      website: formData.get("website"),
-      logo: formData.get("logo")?.name || null, // You'll need to handle file uploads separately
-    };
+// console.log("Farm submitted:", farmData);
 
-    console.log("Farm submitted:", farmData);
-
-    // TODO: Send to your backend or Firebase
-  });
+// TODO: Send to your backend or Firebase
+//});
