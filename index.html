@@ -10,11 +10,14 @@
     <!-- Navigation -->
     <nav class="flex items-center justify-between px-8 py-4 border-b">
       <!-- Left side: logo or main nav -->
-      <div class="text-green-800 font-semibold text-sm">Farm Page</div>
+      <div class="text-green-800 font-semibold text-sm"> <a href="index.html" class="hover:text-green-800"
+          >Farm Page</div>
 
       <!-- Right side: nav links and sign in -->
       <div class="flex items-center space-x-6 text-sm font-medium">
-        <a href="#" class="hover:text-green-800">Farm Profiles</a>
+        <a href="farmprofilesmain.html" class="hover:text-green-800"
+          >Farm Profiles</a
+        >
         <a href="#" class="hover:text-green-800">Resources</a>
         <a href="signup.html">
           <button class="px-4 py-1 text-white bg-green-800 rounded">
@@ -25,134 +28,87 @@
     </nav>
 
     <!-- Hero Section -->
-    <div class="max-w-5xl mx-auto px-6 py-12">
-      <h1 class="text-4xl font-bold text-green-900 mb-6">Find Local Farms</h1>
-      <div class="flex flex-wrap gap-4 items-center mb-10">
-        <input
-          type="text"
-          placeholder="Search for farms"
-          class="flex-1 px-4 py-2 border rounded-md w-full max-w-md"
-        />
-        <button class="px-6 py-2 bg-green-700 text-white rounded">
-          Search
-        </button>
+    <section
+      class="bg-cover bg-center h-96 text-white"
+      style="
+        background-image: url('images/market.jpg');
+      "
+    >
+      <div
+        class="bg-black bg-opacity-50 h-full flex items-center justify-center"
+      >
+        <div class="text-center px-6">
+          <h1 class="text-4xl font-bold mb-2">
+            Discover Local Farmers Markets in the Peace Region
+          </h1>
+          <p class="mb-4 text-xl">
+            Fresh produce, handmade goods, and community spirit—all near you.
+          </p>
+          <input
+            type="text"
+            placeholder="Enter your town..."
+            class="px-4 py-2 rounded text-black"
+          />
+        </div>
       </div>
+    </section>
 
-      <!-- Farm Listings and Map -->
-      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10">
-        <!-- Farm Listings -->
-        <div>
-          <h2 class="text-xl font-semibold mb-4 text-green-900">
-            Farm Listings
-          </h2>
-          <div class="grid grid-cols-2 gap-6">
-            <!-- Farm Card -->
-            <div>
-              <img
-                src="images/logo.jpg"
-                class="rounded-lg mb-2"
-                alt="Lilac Acres Farm"
-              />
-              <h3 class="font-semibold">Lilac Acres Farm</h3>
-              <p class="text-sm text-gray-600">
-                Chetwynd, BC<br />Garlic, Tomatoes
-              </p>
-              <a
-                href="farm-profile.html?farm=lilac-acres"
-                class="mt-2 inline-block px-4 py-1 bg-green-700 text-white rounded"
-              >
-                View Profile
-              </a>
-            </div>
-            <div>
-              <img
-                src="/FarmPage/images/comingsoon.jpg"
-                class="rounded-lg mb-2"
-                alt="Greenfield"
-              />
-              <h3 class="font-semibold">Kealy Farm</h3>
-              <p class="text-sm text-gray-600">
-                Cecil Lake, BC<br />Beef, geese, goats, vegetables
-              </p>
-              <a
-                href="farm-profile.html?farm=kealy-farm"
-                class="mt-2 inline-block px-4 py-1 bg-green-700 text-white rounded"
-              >
-                View Profile
-              </a>
-            </div>
-            <div>
-              <img
-                src="images/comingsoon.jpg"
-                class="rounded-lg mb-2"
-                alt="Sunnybrook"
-              />
-              <h3 class="font-semibold">Farm3</h3>
-              <p class="text-sm text-gray-600">Address<br />Products</p>
-              <a
-                href="farm-profile.html?farm=farm3"
-                class="mt-2 inline-block px-4 py-1 bg-green-700 text-white rounded"
-              >
-                View Profile
-              </a>
-            </div>
-            <div>
-              <img
-                src="images/comingsoon.jpg"
-                class="rounded-lg mb-2"
-                alt="Orchardonk"
-              />
-              <h3 class="font-semibold">Farm4</h3>
-              <p class="text-sm text-gray-600">Address<br />Products</p>
-              <a
-                href="farm-profile.html?farm=farm4"
-                class="mt-2 inline-block px-4 py-1 bg-green-700 text-white rounded"
-              >
-                View Profile
-              </a>
-            </div>
+    <!-- Featured Markets -->
+    <section class="py-12 px-6">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Featured Markets</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <img
+            src="images/market1.jpg"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Chetwynd Market</h3>
+            <p>
+              Every Friday at Chainsaw Row. Fresh vegetables, baked goods, and
+              crafts.
+            </p>
           </div>
         </div>
-
-        <!-- Map Section -->
-        <div>
-          <iframe
-            src="https://www.google.com/maps/d/embed?mid=1jseUQ0mlHLlS0MOJK3E4bva031Wl394&ehbc=2E312F"
-            width="640"
-            height="480"
-          ></iframe>
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <img
+            src="https://source.unsplash.com/400x250/?fruits"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Fort St. John Market</h3>
+            <p>.</p>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <img
+            src="https://source.unsplash.com/400x250/?honey"
+            class="w-full h-48 object-cover"
+          />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Dawson Creek Market</h3>
+            <p></p>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- Education Section -->
-      <div class="mt-16">
-        <h2 class="text-xl font-semibold text-green-900 mb-2">
-          Education and Product Information
-        </h2>
-        <p class="text-sm text-gray-700 max-w-2xl">
-          Provide resources and knowledge, information on growing practices, and
-          product specifics.
-        </p>
-      </div>
-    </div>
-    <footer class="bg-green-100 text-gray-700 mt-12 border-t border-gray-300">
-      <div
-        class="max-w-7xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8 text-sm"
+    <!-- Call to Action -->
+    <section class="bg-green-100 py-12 text-center">
+      <h2 class="text-2xl font-bold mb-4">Are you a local grower or vendor?</h2>
+      <p class="mb-6">
+        List your farmers market and connect with more customers!
+      </p>
+      <a
+        href="#"
+        class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700"
+        >Get Listed</a
       >
-        <!-- About -->
-        <div>
-          <h4 class="text-green-800 font-semibold mb-2">About</h4>
-          <p>
-            Connecting you with local farms in the Peace Region of BC. Fresh,
-            local, and sustainable.
-          </p>
-          <p
-            class="text-center text-xs text-gray-500 py-4 border-t border-gray-200"
-          >
-            © 2025 Peace Farms. All rights reserved.
-          </p>
-        </div>
-      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white text-center p-4">
+      &copy; 2025 Peace Region Farmers Markets. All rights reserved.
     </footer>
   </body>
 </html>
