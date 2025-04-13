@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-4 border-b">
+      <!-- Left side: logo or main nav -->
+      <div class="text-green-800 font-semibold text-xl">
+        <a href="index.html" class="hover:text-green-800">Farm Page</a>
+      </div>
+
+      <!-- Right side: nav links and sign in -->
+      <div class="flex items-center space-x-6 text-xl font-medium">
+        <a href="farmprofilesmain.html" class="hover:text-green-800"
+          >Farm Profiles</a
+        >
+        <a href="signup.html">
+          <button class="px-4 py-1 text-white bg-green-800 rounded">
+            Sign up
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="max-w-5xl mx-auto px-6 py-12">
+      <h1 class="text-4xl font-bold text-green-900 mb-6">Find Local Farms</h1>
+      <div class="flex flex-wrap gap-4 items-center mb-10">
+        <input
+          type="text"
+          placeholder="Search for farms"
+          class="flex-1 px-4 py-2 border rounded-md w-full max-w-md"
+        />
+        <button class="px-6 py-2 bg-green-700 text-white rounded">
+          Search
+        </button>
+      </div>
+
+      <!-- Farm Listings -->
+      <h2 class="text-xl font-semibold mb-4 py-4 text-green-900">
+        Farm Listings
+      </h2>
+      <!--farm Cards Grid -->
+      <div class="grid grid-cols-2 sm:grid-cols-2 py-4 lg:grid-cols-3 gap-6">
+        <!-- Farm Card 1-->
+        <a
+          href="farm-profile.html?farm=big-lake-ranch"
+          class="block bg-white rounded-lg shadow hover:scale-105 transition-all duration-300"
+        >
+          <img
+            src="images/biglakeranch.jpg"
+            class="w-full object-cover rounded-t-lg"
+            alt="Big Lake Ranch"
+          />
+          <div class="p-3">
+            <h3 class="text-2xl font-semibold text-gray-800">Big Lake Ranch</h3>
+            <p class="text-xl text-gray-600">Chetwynd, BC<br />🥩, 🥔</p>
+          </div></a
+        >
+
+        <!--Farm Card 2-->
+        <a
+          href="farm-profile.html?farm=kealy-farm"
+          class="block bg-white rounded-lg shadow hover:scale-105 transition-all duration-300"
+        >
+          <img
+            src="images/comingsoon.jpg"
+            class="w-full object-cover rounded-t-lg"
+            alt="Kealy Farm"
+          />
+          <div class="p-3">
+            <h3 class="text-2xl font-semibold text-gray-800">Kealy Farm</h3>
+            <p class="text-xl text-gray-600">
+              Cecil Lake, BC<br />🥩, 🪿, 🐐, 🥬
+            </p>
+          </div></a
+        >
+        <!--Farm Card 3-->
+        <a
+          href="farm-profile.html?farm=lilac-acres"
+          class="block bg-white rounded-lg shadow hover:scale-105 transition-all duration-300"
+        >
+          <img
+            src="images/logo.jpg"
+            class="w-full object-cover rounded-t-lg"
+            alt="Lilac Acres Farm"
+          />
+          <div class="p-3">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              Lilac Acres Farm
+            </h3>
+            <p class="text-xl text-gray-600">Chetwynd, BC<br />🧄, 🍅</p>
+          </div>
+        </a>
+
+        <!--Farm Card 4-->
+        <a
+          href="farm-profile.html?farm=farm4"
+          class="block bg-white rounded-lg shadow hover:scale-105 transition-all duration-300"
+        >
+          <img
+            src="images/comingsoon.jpg"
+            class="w-full object-cover rounded-t-lg"
+            alt="Coming Soon"
+          />
+          <div class="p-3">
+            <h3 class="text-2xl font-semibold text-gray-800">
+              Farm Coming Soon!
+            </h3>
+            <p class="text-xl text-gray-800">Address<br />Products</p>
+          </div>
+        </a>
+      </div>
+    </div>
+    <!-- Map Section
+        <div>
+          <iframe
+            src="https://www.google.com/maps/d/embed?mid=1jseUQ0mlHLlS0MOJK3E4bva031Wl394&ehbc=2E312F"
+            width="640"
+            height="480"
+          ></iframe>
+        </div>-->
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white text-center p-4">
+      &copy; 2025 FarmPage. All rights reserved.
+    </footer>
+  </body>
+</html>

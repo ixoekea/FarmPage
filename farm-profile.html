@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farm Profile</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-4 border-b">
+      <!-- Left side: logo or main nav -->
+      <div class="text-green-800 font-semibold text-xl">
+        <a href="index.html" class="hover:text-green-800">Farm Page</a>
+      </div>
+
+      <!-- Right side: nav links and sign in -->
+      <div class="flex items-center space-x-6 text-xl font-medium">
+        <a href="farmprofilesmain.html" class="hover:text-green-800"
+          >Farm Profiles</a
+        >
+        <a href="signup.html">
+          <button class="px-4 py-1 text-white bg-green-800 rounded">
+            Sign up
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <!-- Farm Info -->
+    <main class="max-w-4xl mx-auto px-6 py-10 bg-white mt-8 rounded-lg shadow">
+      <h1 id="farm-name" class="text-3xl font-bold text-green-800 mb-2">
+        Loading...
+      </h1>
+      <button class="message-btn">Message</button>
+      <img id="farm-logo" src="" alt="Farm Image" />
+      <div class="about-us p-6 shadow">
+        <h3>About Us</h3>
+        <p id="farm-description" class="text-gray-600"></p>
+        <br />
+
+        <div class="flex-layout">
+          <div class="left-column">
+            <h3>Products</h3>
+            <p id="farm-products" class="text-gray-600 mb-4"></p>
+            <div class="flex-gallery">
+              <h3>Gallery</h3>
+              <div class="relative overflow-hidden rounded-lg shadow-lg">
+                <img id="farm-gallery" src="" alt="Gallery Image" />
+              </div>
+            </div>
+          </div>
+
+          <div class="right-column">
+            <h3>Open Hours</h3>
+            <p id="farm-hours" class="text-gray-600 mb-4"></p>
+            <div class="flex-contact">
+              <h3>Contact</h3>
+              <p id="farm-location" class="text-gray-700 mb-1"></p>
+              <p>
+                <a
+                  id="farm-website"
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  >Visit Website</a
+                >
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white text-center p-4">
+      &copy; 2025 FarmPage. All rights reserved.
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

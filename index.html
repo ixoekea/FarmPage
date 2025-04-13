@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Farmpage</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800 font-sans">
+    <!-- Navigation -->
+    <nav class="flex items-center justify-between px-8 py-4 border-b">
+      <!-- Left side: logo or main nav -->
+      <div class="text-green-800 font-semibold text-xl">
+        <a href="index.html" class="hover:text-green-800">Farm Page</a>
+      </div>
+
+      <!-- Right side: nav links and sign in -->
+      <div class="flex items-center space-x-6 text-xl font-medium">
+        <a href="farmprofilesmain.html" class="hover:text-green-800"
+          >Farm Profiles</a
+        >
+        <a href="signup.html"
+          ><button class="px-4 py-1 text-white bg-green-800 rounded">
+            Sign Up
+          </button></a
+        >
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section
+      class="bg-cover bg-center h-96 text-white"
+      style="background-image: url('images/market.jpg')"
+    >
+      <div
+        class="bg-black bg-opacity-50 h-full flex items-center justify-center"
+      >
+        <div class="text-center px-6">
+          <h1 class="text-4xl font-bold mb-2">
+            Discover Local Farmers Markets in the Peace Region
+          </h1>
+          <p class="mb-4 text-xl">
+            Fresh produce, handmade goods, and community spirit—all near you.
+          </p>
+          <input
+            type="text"
+            placeholder="Enter your town..."
+            class="px-4 py-2 rounded text-black"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Markets -->
+    <section class="py-12 px-6">
+      <h2 class="text-2xl font-semibold mb-6 text-center">Featured Markets</h2>
+      <div class="grid md:grid-cols-3 gap-8">
+        <a
+          href="https://www.facebook.com/groups/158710567641924/"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="block hover:shadow-lg transition-shadow duration-300"
+        >
+          <div class="bg-white shadow rounded-lg overflow-hidden">
+            <img src="images/chetwynd.jpg" class="w-full h-48 object-cover" />
+            <div class="p-4">
+              <h3 class="text-xl font-bold">Chetwynd Market</h3>
+              <p>Every Friday 3 - 6PM at Carvers Row.</p>
+              <p>Fresh vegetables, baked goods, and crafts.</p>
+            </div>
+          </div></a
+        >
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <img src="images/market1.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Market1</h3>
+            <p></p>
+          </div>
+        </div>
+        <div class="bg-white shadow rounded-lg overflow-hidden">
+          <img src="images/market1.jpg" class="w-full h-48 object-cover" />
+          <div class="p-4">
+            <h3 class="text-xl font-bold">Market2</h3>
+            <p></p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Call to Action -->
+    <section class="bg-green-100 py-12 text-center">
+      <h2 class="text-2xl font-bold mb-4">Are you a local grower or vendor?</h2>
+      <p class="mb-6">
+        List your farmers market and connect with more customers!
+      </p>
+      <a
+        href="#"
+        class="bg-green-600 text-white px-6 py-3 rounded hover:bg-green-700"
+        >Get Listed</a
+      >
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-green-900 text-white text-center p-4">
+      &copy; 2025 FarmPage. All rights reserved.
+    </footer>
+  </body>
+</html>

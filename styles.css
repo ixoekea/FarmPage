@@ -1,0 +1,112 @@
+body {
+  font-family: "Inter", sans-serif;
+  margin: 0;
+  padding: 2rem;
+  background-color: #f3f4f6;
+}
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.flex-layout {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.left-column,
+.right-column {
+  width: 45%;
+}
+
+#farm-image {
+  max-width: 300px;
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.flex-gallery {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+#farm-description,
+#farm-products,
+#farm-hours,
+#farm-gallery,
+#farm-location,
+#farm-website {
+  text-align: left; /* Ensure all text in these sections aligns left */
+}
+
+h3,
+#farm-description {
+  text-align: left;
+}
+#farm-products span {
+  margin-right: 12px;
+  font-size: 16px;
+  display: block;
+}
+.hours,
+.contact,
+#farm-website {
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+#farm-website {
+  display: block;
+  color: #007bff;
+}
+#farm-website:hover {
+  color: #0056b3;
+}
+.message-btn {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.message-btn:hover {
+  background-color: #0056b3;
+}
+
+#farm-gallery {
+  width: 250px;
+  height: 250px;
+  position: relative;
+  overflow: hidden;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#flex-gallery {
+  transition: opacity 0.3s ease;
+  opacity: 0;
+}
+#flex-gallery.loaded {
+  opacity: 1;
+}
+
+.about-us {
+  border: 1px solid black;
+  background-color: #bdeebd;
+  border-radius: 10px;
+}
