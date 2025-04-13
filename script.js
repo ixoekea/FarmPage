@@ -137,7 +137,7 @@ document
     });
 
     try {
-      const response = await fetch("http://localhost:3000/submit", {
+      const response = await fetch("https://farmpage.onrender.com", {
         method: "POST",
         body: formData,
       });
