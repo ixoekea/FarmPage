@@ -24,7 +24,6 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
-const multer = require("multer");
 const upload = multer({ storage });
 
 const nodemailer = require("nodemailer");
