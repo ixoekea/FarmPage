@@ -1,3 +1,4 @@
+require("dotenv").config();
 import express from "express";
 import multer from "multer";
 import cors from "cors";
@@ -25,9 +26,14 @@ const storage = multer.diskStorage({
 });
 
 const upload = multer({ storage });
+const multer = require("multer");
+const nodemailer = require("nodemailer");
+require("dotenv").config(); // If using a .env file
 
-// Handle form submissions
-app.post("/submit", upload.single("logo"), (req, res) => {
+const upload = multer({ storage });
+
+// Handle form submissions with email
+app.post("/submit", upload.single("logo"), async (req, res) => {
   const { farmName, email, phone, location, website, product } = req.body;
   const logoFile = req.file;
 
@@ -38,12 +44,44 @@ app.post("/submit", upload.single("logo"), (req, res) => {
     location,
     website,
     product,
-    logoFilename: logoFile?.filename || null,
+    logoFilename: logoFile?.filename || "No file uploaded",
   };
 
   console.log("📩 New farm signup:", farmData);
 
-  res.json({ success: true, message: "Form submitted successfully!" });
+  // Email setup
+  const transporter = nodemailer.createTransport({
+    service: "gmail",
+    auth: {
+      user: process.env.EMAIL_USER,
+      pass: process.env.EMAIL_PASS,
+    },
+  });
+
+  const mailOptions = {
+    from: `"FarmPage" <${process.env.EMAIL_USER}>`,
+    to: "your-email@example.com", // <--- Replace with YOUR email
+    subject: "New Farm Signup",
+    text: `
+New farm signup submitted:
+
+Name: ${farmData.name}
+Email: ${farmData.email}
+Phone: ${farmData.phone}
+Location: ${farmData.location}
+Website: ${farmData.website}
+Product: ${farmData.product || "N/A"}
+Logo File: ${farmData.logoFilename}
+    `,
+  };
+
+  try {
+    await transporter.sendMail(mailOptions);
+    res.json({ success: true, message: "Form submitted and email sent!" });
+  } catch (err) {
+    console.error("Email sending failed:", err);
+    res.status(500).json({ success: false, message: "Failed to send email." });
+  }
 });
 
 // Start server
