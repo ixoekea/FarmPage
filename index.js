@@ -24,9 +24,9 @@ const storage = multer.diskStorage({
     cb(null, uniqueName);
   },
 });
-
-const upload = multer({ storage });
 const multer = require("multer");
+const upload = multer({ storage });
+
 const nodemailer = require("nodemailer");
 require("dotenv").config(); // If using a .env file
 
