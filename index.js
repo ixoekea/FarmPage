@@ -57,7 +57,7 @@ app.post("/submit", upload.single("logo"), async (req, res) => {
 
   const mailOptions = {
     from: `"FarmPage" <${process.env.EMAIL_USER}>`,
-    to: "your-email@example.com", // <--- Replace with YOUR email
+    to: "tyler.kinsey.tk@gmail.com", // <--- Replace with YOUR email
     subject: "New Farm Signup",
     text: `
 New farm signup submitted:
