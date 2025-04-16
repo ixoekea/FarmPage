@@ -1,8 +1,11 @@
-require("dotenv").config();
+import dotenv from "dotenv";
+dotenv.config();
+
 import express from "express";
 import multer from "multer";
 import cors from "cors";
 import fs from "fs";
+import nodemailer from "nodemailer";
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -25,9 +28,6 @@ const storage = multer.diskStorage({
   },
 });
 const upload = multer({ storage });
-
-const nodemailer = require("nodemailer");
-require("dotenv").config(); // If using a .env file
 
 // Handle form submissions with email
 app.post("/submit", upload.single("logo"), async (req, res) => {
