@@ -30,8 +30,6 @@ const multer = require("multer");
 const nodemailer = require("nodemailer");
 require("dotenv").config(); // If using a .env file
 
-const upload = multer({ storage });
-
 // Handle form submissions with email
 app.post("/submit", upload.single("logo"), async (req, res) => {
   const { farmName, email, phone, location, website, product } = req.body;
